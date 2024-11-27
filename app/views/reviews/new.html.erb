@@ -1,0 +1,12 @@
+<h1>Add new review</h1>
+
+<%# DISPLAY THE FORM! %>
+
+<form action="/restaurants/<%= @restaurant.id %>/reviews"></form>
+
+<%= simple_form_for([@restaurant, @review]) do |f| %>
+
+  <%= f.input :content %>
+  <%= f.submit class: 'btn btn-primary' %>
+
+<% end %>

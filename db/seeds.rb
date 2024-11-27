@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts 'Cleaning the DB'
+
+Restaurant.destroy_all
+
+puts 'Creating restaurants...'
+
+temakeria = Restaurant.new(name: 'Temakeria', address: 'Ipanema - Rio de janeiro', rating: 5, chef_name: 'Bia')
+temakeria.save
+
+outback = Restaurant.new(name: 'Outback', address: 'Botafogo - Rio de Janeiro', rating: 4, chef_name: 'Nominoe')
+outback.save
+
+puts "Restaurants created! zo/"
